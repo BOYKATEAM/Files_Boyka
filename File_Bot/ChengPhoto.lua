@@ -5,7 +5,7 @@ if text then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 if data.id_ then 
 if data.id_ ~= bot_id then 
-local ChengPhoto = database:get(bot_id..'Cheng:Photo'..data.id_)
+local BOYKAChengPhoto = database:get(bot_id..'Cheng:Photo'..data.id_)
 if not data.profile_photo_ then 
 if ChengPhoto then 
 send(msg.chat_id_, msg.id_, "حذف كل صوره الحلو 😂👌🏻")
@@ -13,7 +13,7 @@ database:del(bot_id..'Cheng:Photo'..data.id_)
 end
 end
 if data.profile_photo_.big_.persistent_id_ then 
-if TshakeChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
+if BOYKAChengPhoto ~= data.profile_photo_.big_.persistent_id_ then 
 local Text = {
   "شكو غيرت صورتك  يا حلو ",
   "منور طالع حلو عل صوره جديده",
@@ -32,4 +32,4 @@ end,nil)
 end
 
 end
-return {Poyka = ChengPhoto}
+return {BOYKA = ChengPhoto}
