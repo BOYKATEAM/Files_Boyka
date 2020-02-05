@@ -375,7 +375,7 @@ TEST = [[
 ↓      ↓     ↓      ↓     ↓     ↓   
 👊 ‹•› 👊 ‹•› 👊 ‹•› 👊 ‹•› 👊 ‹•› 👊
 🔘| اختر لأستخراج المحيبس الايد التي تحمل المحيبس 
-🎉| الفائز يحصل على { 3 } من النقاط *
+🎉| الفائز يحصل على { 3 } من النقود *
 ]]
 send(msg.chat_id_, msg.id_,TEST)
 database:setex(bot_id.."SET:GAME" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 100, true)  
@@ -505,7 +505,7 @@ Text = '\n💠| بالتاكيد تم تفعيل الالعاب'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text == 'جواهري' or text == 'مجوهراتي' then 
+if text == 'النقودي' or text == 'نقودي' then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -517,14 +517,14 @@ return false
 end
 local Num = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_) or 0
 if Num == 0 then 
-Text = '📌| لم تلعب اي لعبه للحصول على جواهر'
+Text = '📌| لم تلعب اي لعبه للحصول على نقود'
 else
-Text = '📮| عدد جواهر التي رحبتها هي *» { '..Num..' } مجوهره *'
+Text = '📮| عدد النقود التي ربحتها هي*» { '..Num..' } نقود *'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
-if text and text:match("^بيع مجوهراتي (%d+)$") or text and text:match("^بيع جواهري (%d+)$") then
-local NUMPY = text:match("^بيع مجوهراتي (%d+)$") or text:match("^بيع جواهري (%d+)$") 
+if text and text:match("^بيع نقودي (%d+)$") or text and text:match("^بيع جواهري (%d+)$") then
+local NUMPY = text:match("^بيع نقودي (%d+)$") or text:match("^بيع جواهري (%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -539,7 +539,7 @@ send(msg.chat_id_,msg.id_,"\n*📮| لا استطيع البيع اقل من 1 *
 return false 
 end
 if tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)) == tonumber(0) then
-send(msg.chat_id_,msg.id_,'📮| ليس لديك جواهر من الالعاب \n🎗️| اذا كنت تريد ربح الجواهر \n📌| ارسل الالعاب وابدأ اللعب ! ') 
+send(msg.chat_id_,msg.id_,'📮| ليس لديك نقود من الالعاب\n🎗️| اذا كنت تريد ربح النقود \n📌| ارسل الالعاب وابدأ اللعب ! ') 
 else
 local NUM_GAMES = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if tonumber(NUMPY) > tonumber(NUM_GAMES) then
