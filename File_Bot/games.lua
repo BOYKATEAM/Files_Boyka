@@ -23,9 +23,11 @@ Text_Games = [[
 🔍| لعبه الاسرع ← لعبة اسرع شخص
 🗳️| لعبه السمايلات ← لعبة المطابقه 
 🎭| لعبه المختلف ← لعبة الذكاء
+📇| لعبه الرياضيات ← لعبة الارقام
+💻| لعبه الانكليزي ← لعبة ترجمه
 📎| لعبه الامثله ← لعبة تصحيح 
 📚|لعبه العكس ← لعبة عكس الكلمات
-📝| لعبه الحزوره ←لعبة لعبة التفكير 
+📝| لعبه الحزوره ←لعبة التفكير 
 🔖| لعبه المعاني ← العبه الشهيره 
 ء┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 الميزيد م̷ـــِْن المعلومات √
@@ -35,7 +37,7 @@ Text_Games = [[
 send(msg.chat_id_, msg.id_,Text_Games) 
 end
 
-if text == 'سمايلات' or text == 'سمايل' then
+if text == 'السمايلات' or text == 'السمايل' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -62,7 +64,7 @@ end
 database:set(bot_id..'Set:Sma'..msg.chat_id_,true)
 return false
 end 
-if text == 'الاسرع' or tect == 'ترتيب' then
+if text == 'ترتيب' or text == 'الترتيب' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -130,7 +132,7 @@ end
 database:set(bot_id..'Speed:Tr'..msg.chat_id_,true)
 end 
 
-if text == 'حزوره' then
+if text == 'الحزوره' or text == 'حزوره' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -191,7 +193,7 @@ end
 database:set(bot_id..'Set:Hzora'..msg.chat_id_,true)
 end 
 
-if text == 'معاني' then
+if text == 'المعاني' or text == 'معاني' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -243,7 +245,7 @@ database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)
 end
 database:set(bot_id..'Set:Maany'..msg.chat_id_,true)
 end 
-if text == 'العكس' then
+if text == 'العكس' or text == 'عكس' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -320,7 +322,7 @@ end
 end
 end
 end
-if text == 'خمن' or text == 'تخمين' then   
+if text == 'خمن' or text == 'التخمين' then   
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -357,7 +359,7 @@ end
 end
 end
 
-if text == 'محيبس' or text == 'بات' then
+if text == 'محيبس' or text == 'البات' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -384,7 +386,7 @@ end
 end
 
 ------------------------------------------------------------------------
-if text == 'المختلف' then
+if text == 'المختلف' or text == 'مختلف' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -439,7 +441,90 @@ end
 database:set(bot_id..'Set:Moktlf:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
-if text == 'امثله' then
+if text == 'الرياضيات' or text == 'رياضيات' then
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'🔖| لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n 📌| اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+Hussein = {'9','2','60','9','5','4','25','10','17','15','39','5','16',};
+name = Hussein[math.random(#Hussein)]
+database:del(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_)
+database:set(bot_id..':Set:Ryadeat'..msg.chat_id_,name)
+name = string.gsub(name,'9','2+7=')
+name = string.gsub(name,'2','5-3=')
+name = string.gsub(name,'60','(30)² =')
+name = string.gsub(name,'9','2+2+5=')
+name = string.gsub(name,'5','8-3=?')
+name = string.gsub(name,'4','40÷10=')
+name = string.gsub(name,'25','30-5=')
+name = string.gsub(name,'10','100÷10=')
+name = string.gsub(name,'17','10+5+2=')
+name = string.gsub(name,'15','25-10=')
+name = string.gsub(name,'39','44-5=')
+name = string.gsub(name,'5','12+1-8=')
+name = string.gsub(name,'16','16+16-16=')
+send(msg.chat_id_, msg.id_,'اجب عن التالي ~ {'..name..'}')
+return false
+end
+end
+------------------------------------------------------------------------
+if text == ''..(database:get(bot_id..':Set:Ryadeat'..msg.chat_id_) or '')..'' then 
+if not database:get(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_) then 
+database:del(bot_id..':Set:Ryadeat'..msg.chat_id_)
+send(msg.chat_id_, msg.id_,'✨┇ الف مبروك لقد فزت \n♻┇ للعب مره اخره ارسل »{ رياضيات }')
+database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+end
+database:set(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_,true)
+end
+------------------------------------------------------------------------
+if text == 'انكليزي' or text == 'الانكليزي' then
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'🔖| لا تستطيع استخدام البوت يرجى الاشتراك في القناة حتى تتمكن من استخدام الاوامر \n 📌| اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
+Hussein = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','مختلف','سدني','نقود','اعلم','ذئب','تمساح','ذكي',};
+name = Hussein[math.random(#Hussein)]
+database:del(bot_id..'Set:English:Bot'..msg.chat_id_)
+database:set(bot_id..':Set:English'..msg.chat_id_,name)
+name = string.gsub(name,'ذئب','Wolf')
+name = string.gsub(name,'معلومات','Information')
+name = string.gsub(name,'قنوات','Channels')
+name = string.gsub(name,'مجموعات','Groups')
+name = string.gsub(name,'كتاب','Book')
+name = string.gsub(name,'تفاحه','Apple')
+name = string.gsub(name,'سدني','Sydney')
+name = string.gsub(name,'نقود','money')
+name = string.gsub(name,'اعلم','I know')
+name = string.gsub(name,'تمساح','crocodile')
+name = string.gsub(name,'مختلف','Different')
+name = string.gsub(name,'ذكي','Intelligent')
+send(msg.chat_id_, msg.id_,'اجب عن التالي ~ { '..name..' }')
+return false
+end
+end
+------------------------------------------------------------------------
+if text == ''..(database:get(bot_id..':Set:English'..msg.chat_id_) or '')..'' then 
+if not database:get(bot_id..'Set:English:Bot'..msg.chat_id_) then 
+database:del(bot_id..':Set:English'..msg.chat_id_)
+send(msg.chat_id_, msg.id_,'✨┇ الف مبروك لقد فزت \n♻┇ للعب مره اخره ارسل »{ `انكليزي` }')
+database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_, 1)  
+end
+database:set(bot_id..'Set:English:Bot'..msg.chat_id_,true)
+end
+------------------------------------------------------------------------
+if text == 'امثله' or text == 'الامثله' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
