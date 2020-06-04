@@ -64,7 +64,7 @@ end
 database:set(bot_id..'Set:Sma'..msg.chat_id_,true)
 return false
 end 
-if text == 'ترتيب' or text == 'الترتيب' then
+if text == 'اسرع' or text == 'الاسرع' or text == 'ترتيب' then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -452,24 +452,24 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-Hussein = {'9','2','60','9','5','4','25','10','17','15','39','5','16',};
-name = Hussein[math.random(#Hussein)]
+Amer = {'22','30','33','60','90','2','5','36','10','88','50','10','19',};
+name = Amer[math.random(#Amer)]
 database:del(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_)
 database:set(bot_id..':Set:Ryadeat'..msg.chat_id_,name)
-name = string.gsub(name,'9','2+7=')
-name = string.gsub(name,'2','5-3=')
-name = string.gsub(name,'60','(30)² =')
-name = string.gsub(name,'9','2+2+5=')
-name = string.gsub(name,'5','8-3=?')
-name = string.gsub(name,'4','40÷10=')
-name = string.gsub(name,'25','30-5=')
-name = string.gsub(name,'10','100÷10=')
-name = string.gsub(name,'17','10+5+2=')
-name = string.gsub(name,'15','25-10=')
-name = string.gsub(name,'39','44-5=')
-name = string.gsub(name,'5','12+1-8=')
-name = string.gsub(name,'16','16+16-16=')
-send(msg.chat_id_, msg.id_,'اجب عن التالي ~ {'..name..'}')
+name = string.gsub(name,'22','2+20=')
+name = string.gsub(name,'30','10×3=')
+name = string.gsub(name,'33','30+3=')
+name = string.gsub(name,'60','33+27=')
+name = string.gsub(name,'90','9×9+9=')
+name = string.gsub(name,'2','2×1=')
+name = string.gsub(name,'5','5×1=')
+name = string.gsub(name,'36','6×6=')
+name = string.gsub(name,'10','2×8=')
+name = string.gsub(name,'88','8+80=')
+name = string.gsub(name,'50','30+20=')
+name = string.gsub(name,'10','2+8=')
+name = string.gsub(name,'19','6+13=')
+send(msg.chat_id_, msg.id_,'🎗️| حل المسأله الرياضيه  » {'..name..'}')
 return false
 end
 end
@@ -494,8 +494,8 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-Hussein = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','مختلف','سدني','نقود','اعلم','ذئب','تمساح','ذكي',};
-name = Hussein[math.random(#Hussein)]
+Amer = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','مختلف','سدني','فلوس','اعلم','ذئب','تمساح','ذكي',};
+name = Amer[math.random(#Amer)]
 database:del(bot_id..'Set:English:Bot'..msg.chat_id_)
 database:set(bot_id..':Set:English'..msg.chat_id_,name)
 name = string.gsub(name,'ذئب','Wolf')
@@ -505,12 +505,12 @@ name = string.gsub(name,'مجموعات','Groups')
 name = string.gsub(name,'كتاب','Book')
 name = string.gsub(name,'تفاحه','Apple')
 name = string.gsub(name,'سدني','Sydney')
-name = string.gsub(name,'نقود','money')
+name = string.gsub(name,'فلوس','money')
 name = string.gsub(name,'اعلم','I know')
 name = string.gsub(name,'تمساح','crocodile')
 name = string.gsub(name,'مختلف','Different')
 name = string.gsub(name,'ذكي','Intelligent')
-send(msg.chat_id_, msg.id_,'اجب عن التالي ~ { '..name..' }')
+send(msg.chat_id_, msg.id_,'🎗️| ترجم الكلمات الاتيه  » {'..name..'}')
 return false
 end
 end
