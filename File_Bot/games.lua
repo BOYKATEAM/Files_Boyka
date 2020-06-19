@@ -12,12 +12,12 @@ return false
 end
 Text_Games = [[
 ⌯︙اوامر الالعاب كتالي 
-… … … … … … … … … … …
+ٴ… … … … … … … … … … …
 ⌯︙تفعيل الالعاب • لتفعيل العبه ° 
 ⌯︙تعطيل الالعاب • لتعطيل العبه °
-… … … … … … … … … … …
+ٴ… … … … … … … … … … …
 ⌯︙الالعاب الخاصه بسورس 
-… … … … … … … … … … …
+ٴ… … … … … … … … … … …
 ⌯︙لعبه البات ~⪼ لعبة المحيبس 
 ⌯︙لعبه التخمين ~⪼ لعبة البحث
 ⌯︙لعبه الاسرع ~⪼ لعبة اسرع شخص
@@ -29,8 +29,8 @@ Text_Games = [[
 ⌯︙لعبه العكس ~⪼ لعبة عكس الكلمات
 ⌯︙لعبه الحزوره ~⪼لعبة التفكير 
 ⌯︙لعبه المعاني ~⪼ العبه الشهيره 
-… … … … … … … … … … …
-⌯︙Ch @BOBBW
+ٴ… … … … … … … … … … …
+⌯︙Ch ~⪼ @BOBBW
 ]]
 send(msg.chat_id_, msg.id_,Text_Games) 
 end
@@ -450,7 +450,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-Amer = {'22','30','33','60','90','2','5','36','10','88','50','10','19',};
+Amer = {'22','30','33','60','90','2','5','36','16','88','50','10','19',};
 name = Amer[math.random(#Amer)]
 database:del(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_)
 database:set(bot_id..':Set:Ryadeat'..msg.chat_id_,name)
@@ -462,7 +462,7 @@ name = string.gsub(name,'90','9×9+9=')
 name = string.gsub(name,'2','2×1=')
 name = string.gsub(name,'5','5×1=')
 name = string.gsub(name,'36','6×6=')
-name = string.gsub(name,'10','2×8=')
+name = string.gsub(name,'16','2×8=')
 name = string.gsub(name,'88','8+80=')
 name = string.gsub(name,'50','30+20=')
 name = string.gsub(name,'10','2+8=')
