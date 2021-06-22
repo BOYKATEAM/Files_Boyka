@@ -26,8 +26,8 @@ TextReply = 'هلاوات حبيبي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '😐' then
-TextReply = 'شبيك صافن ولك😂'
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:59.9882491186839% 89.9529964747356%;background-size:5418.75% 5418.75%" data-codepoints="1f610"></span></span>' then
+TextReply = 'شبيك صافن ولك<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:59.9882491186839% 61.98589894242068%;background-size:5418.75% 5418.75%" data-codepoints="1f602"></span></span>'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
@@ -116,42 +116,42 @@ TextReply = 'سؤال صعب خليني افكر'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🌚' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:12.044653349001175% 48.00235017626322%;background-size:5418.75% 5418.75%" data-codepoints="1f31a"></span></span>' then
 TextReply = 'كمر اسود'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🙄' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:61.98589894242068% 91.95064629847238%;background-size:5418.75% 5418.75%" data-codepoints="1f644"></span></span>' then
 TextReply = 'نزل عينك حبي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '😒' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:59.9882491186839% 93.94829612220916%;background-size:5418.75% 5418.75%" data-codepoints="1f612"></span></span>' then
 TextReply = 'شبيك كالب خلقتك'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '😳' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:61.98589894242068% 57.99059929494712%;background-size:5418.75% 5418.75%" data-codepoints="1f633"></span></span>' then
 TextReply = 'ها بس لا شفت عمتك العوبه'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🙁' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:61.98589894242068% 85.95769682726204%;background-size:5418.75% 5418.75%" data-codepoints="1f641"></span></span>' then
 TextReply = 'تعال شكيلي اهمومك ليش ضايج حياتي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🚶💔' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:71.97414806110459% 51.99764982373678%;background-size:5418.75% 5418.75%" data-codepoints="1f6b6-200d-2642-fe0f"></span></span><span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:50% 18.037602820211514%;background-size:5418.75% 5418.75%" data-codepoints="1f494"></span></span>' then
 TextReply = 'وين رايح تعال حبي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🙂' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:61.98589894242068% 87.95534665099882%;background-size:5418.75% 5418.75%" data-codepoints="1f642"></span></span>' then
 TextReply = 'ثكيل حلوو'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '🌝' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:12.044653349001175% 53.99529964747356%;background-size:5418.75% 5418.75%" data-codepoints="1f31d"></span></span>' then
 TextReply = 'منورر يوم حياتي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
@@ -171,7 +171,7 @@ TextReply = 'كفو من اصلك ضلعي'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '😌' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:59.9882491186839% 81.96239717978848%;background-size:5418.75% 5418.75%" data-codepoints="1f60c"></span></span>' then
 TextReply = 'والمطلوب شرايد'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
@@ -187,7 +187,7 @@ send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
 if text == 'شسمك' then
-TextReply = 'اسمي صكار البنات🤭'
+TextReply = 'اسمي صكار البنات<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:77.96709753231492% 30.0235017626322%;background-size:5418.75% 5418.75%" data-codepoints="1f92d"></span></span>'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
@@ -236,7 +236,7 @@ TextReply = 'دايمه ان شاء لله'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
 end
-if text == '😹' then
+if text == '<span class="emoji-outer emoji-sizer"><span class="emoji-inner" style="background: url(chrome-extension://gaoflciahikhligngeccdecgfjngejlh/emoji-data/sheet_apple_32.png);background-position:61.98589894242068% 69.9764982373678%;background-size:5418.75% 5418.75%" data-codepoints="1f639"></span></span>' then
 TextReply = 'دايمه ان شاء الله '
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
 return false
