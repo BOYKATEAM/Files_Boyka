@@ -1,11 +1,14 @@
 local function games(msg)
 local text = msg.content_.text_
 if text == 'الالعاب' and database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 Text_Games = [[
  ⌯︙ اوامر الالعاب كتالي 
@@ -34,11 +37,14 @@ send(msg.chat_id_, msg.id_,Text_Games)
 end
 
 if text == 'السمايلات' or text == 'السمايل' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 database:del(bot_id..'Set:Sma'..msg.chat_id_)
@@ -58,11 +64,14 @@ database:set(bot_id..'Set:Sma'..msg.chat_id_,true)
 return false
 end 
 if text == 'اسرع' or text == 'الاسرع' or text == 'ترتيب' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 database:del(bot_id..'Speed:Tr'..msg.chat_id_)
@@ -123,11 +132,14 @@ database:set(bot_id..'Speed:Tr'..msg.chat_id_,true)
 end 
 
 if text == 'الحزوره' or text == 'حزوره' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 database:del(bot_id..'Set:Hzora'..msg.chat_id_)
@@ -181,11 +193,14 @@ database:set(bot_id..'Set:Hzora'..msg.chat_id_,true)
 end 
 
 if text == 'المعاني' or text == 'معاني' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 database:del(bot_id..'Set:Maany'..msg.chat_id_)
@@ -230,11 +245,14 @@ end
 database:set(bot_id..'Set:Maany'..msg.chat_id_,true)
 end 
 if text == 'العكس' or text == 'عكس' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 database:del(bot_id..'Set:Aks'..msg.chat_id_)
@@ -304,11 +322,14 @@ end
 end
 end
 if text == 'خمن' or text == 'التخمين' then   
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 Num = math.random(1,20)
@@ -338,11 +359,14 @@ end
 end
 
 if text == 'محيبس' or text == 'البات' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then   
 Num = math.random(1,6)
@@ -362,11 +386,14 @@ end
 
 ------------------------------------------------------------------------
 if text == 'المختلف' or text == 'مختلف' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 mktlf = {'😸','☠','🐼','🐇','??','🌚','⭐️','✨','⛈','🌥','⛄️','👨‍🔬','👨‍💻','👨‍🔧','👩‍🍳','🧚‍♀','??‍♂','??‍♂','🙍‍♂','🧖‍♂','👬','👨‍👨‍👧','🕒','🕤','⌛️','📅',};
@@ -414,11 +441,14 @@ database:set(bot_id..'Set:Moktlf:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
 if text == 'الرياضيات' or text == 'رياضيات' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 Amer = {'22','30','33','60','90','2','5','36','16','88','50','10','19',};
@@ -453,11 +483,14 @@ database:set(bot_id..'Set:Ryadeat:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
 if text == 'انكليزي' or text == 'الانكليزي' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 Amer = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','مختلف','سدني','فلوس','اعلم','ذئب','تمساح','ذكي',};
@@ -491,11 +524,14 @@ database:set(bot_id..'Set:English:Bot'..msg.chat_id_,true)
 end
 ------------------------------------------------------------------------
  if text == 'كت تويت' or text == 'كت تويتت' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 Amer = {'65','43','17','0001','564','666','0808','0909','999','555','123','12',};
@@ -520,11 +556,14 @@ end
 end
  --------------------------------------------------------------------
 if text == 'امثله' or text == 'الامثله' then
-local url,res = http.request('http://209.250.249.209/ch/?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_BO6OK ~= true then
-send(msg.chat_id_,msg.id_,'\n❃∫عليك الاشتراك في قناة البوت \n❃∫قناة البوت ← { @BO6OK }')   
-return false 
+if AddChannel(msg.sender_user_id_) == false then
+local textchuser = database:get(bot_id..'text:ch:user')
+if textchuser then
+send(msg.chat_id_, msg.id_,'['..textchuser..']')
+else
+send(msg.chat_id_, msg.id_,'❃∫ عذراً عـليك الاشـتࢪاك في قنـاة البـوت اولآ\n❃∫قناة الاشتراك ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
 mthal = {'جوز','ضراطه','الحبل','الحافي','شقره','بيدك','سلايه','النخله','الخيل','حداد','المبلل','يركص','قرد','العنب','العمه','الخبز','بالحصاد','شهر','شكه','يكحله',};
